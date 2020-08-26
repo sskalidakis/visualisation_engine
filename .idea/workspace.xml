@@ -2,8 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19ef2fbb-f249-4e43-a75a-21659b7c98be" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data_manager/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_manager/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_manager/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_manager/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_manager/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_manager/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_manager/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base_template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/examples/url_examples" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/templates/visualiser/bar_heat_map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/templates/visualiser/bar_range_chart_am4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/templates/visualiser/chord_diagram.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/templates/visualiser/column_chart_am4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/templates/visualiser/heat_map_chart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/templates/visualiser/heat_map_on_map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/templates/visualiser/line_chart_am4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/templates/visualiser/main_visualiser_am4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/templates/visualiser/pie_chart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/templates/visualiser/radar_chart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/templates/visualiser/range_chart_am4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/templates/visualiser/sankey_diagram.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/templates/visualiser/stacked_column_chart_am4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualiser/visualiser_settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualisation_engine/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualisation_engine/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualisation_engine/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualisation_engine/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +59,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Windows/python3.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\epu\PycharmProjects\visualisation_engine\static" />
+      <recent name="C:\Users\epu\PycharmProjects\visualisation_engine\templates" />
+      <recent name="C:\Users\epu\PycharmProjects\visualisation_engine" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="visualisation_engine" type="Python.DjangoServer" factoryName="Django server">
@@ -65,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598450435123</updated>
-      <workItem from="1598450436637" duration="1721000" />
+      <workItem from="1598450436637" duration="4908000" />
     </task>
     <task id="LOCAL-00001" summary="project initialisation">
       <created>1598452109272</created>
@@ -81,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598452135851</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initialisaing settings">
+      <created>1598452413641</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598452413641</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,13 +135,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project initialisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="project initialisation" />
+    <MESSAGE value="initialisaing settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="initialisaing settings" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1335" y="115" key="CommitChangelistDialog2" timestamp="1598452134493">
+    <state x="-1335" y="115" key="CommitChangelistDialog2" timestamp="1598452412946">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1335" y="115" key="CommitChangelistDialog2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598452134493" />
+    <state x="-1335" y="115" key="CommitChangelistDialog2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1598452412946" />
     <state x="-1459" y="162" key="SettingsEditor" timestamp="1598451310935">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
