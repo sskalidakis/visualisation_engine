@@ -285,7 +285,7 @@ def show_line_chart(request):
     dataset = response_data['dataset']
 
     # TODO: Create a method for getting the actual data from DBs, CSV files, dataframes??
-    data = generate_data_for_range_chart()
+    data = FAKE_DATA
 
     color_list = define_color_code_list(color_list_request)
 
@@ -531,8 +531,7 @@ def heatmap_chart_data_from_file(dataset):
     diction = json.loads(data)
     for model, vars in diction.items():
         for var, val in vars.items():
-            var_title = Harmonisation_Variables.objects.get(var_name=var).var_title
-            final_data.append({"model": model, "variable": var_title, "value": val})
+            final_data.append({"model": model, "variable": var, "value": val})
     print(final_data)
     return final_data
 
