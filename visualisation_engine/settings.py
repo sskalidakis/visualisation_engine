@@ -26,7 +26,7 @@ SECRET_KEY = 's5oyds$!u$m%m#oq6iqr!=sq)$5gt(bo6bnu+2qsg#fcgzfw@b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'qualichain_db@qualichain.epu.ntua.gr']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'visualiser'
 ]
 
 MIDDLEWARE = [
@@ -120,3 +121,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_FINDER = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+
+]
+
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
