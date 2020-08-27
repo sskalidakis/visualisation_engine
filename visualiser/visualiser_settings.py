@@ -1,1 +1,1 @@
-DATA_TABLES_APP = 'i2amparis_main'
+DATA_TABLES_APP = 'data_manager'
