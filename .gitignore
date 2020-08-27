@@ -201,7 +201,7 @@ web.debug.config
 media/users/*
 celerybeat*
 !celerybeat-supervisor.conf
-static/*
+#static/*
 .vscode/
 .history/
 
