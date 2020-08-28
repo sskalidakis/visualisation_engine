@@ -12,7 +12,7 @@ from visualiser.fake_data.fake_data import FAKE_DATA, COLUMNCHART_DATA, BAR_RANG
     RADAR_CHART_DATA, PARALLEL_COORDINATES_DATA_2, BAR_HEATMAP_DATA_2, BAR_RANGE_CHART_DATA_2, SANKEYCHORD_DATA_2, \
     HEAT_MAP_CHART_DATA2, HEAT_MAP_DATA_FOR_MAP
 
-from data_manager.models import  Variable, Dataset, TestVariable, TestDataset
+from data_manager.models import Variable, Dataset, TestVariable, TestDataset
 
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.csrf import csrf_exempt
@@ -566,40 +566,6 @@ def chord_diagram(request):
     return chord_diagram.show_chart()
 
 
-@csrf_exempt
-def get_response_parallel_coordinates_chart(request):
-    if request.method == "GET":
-        json_response = {
-            "y_axes": request.GET.getlist("y_axes[]", []),
-            "title": request.GET.get("title", ""),
-            "about_title": request.GET.get("title", ""),
-            "about_text": request.GET.get("text", ""),
-            "groups_title": request.GET.get("groups_title", ""),
-            "samples_size": request.GET.get("samples_size", "10"),
-
-        }
-    else:
-        json_response = json.loads(request.body)
-        print(json_response)
-    return json_response
-
-
-def parallel_coordinates_chart(request):
-    """
-    y_axes the name of columns
-    data a list of lists, each list must have the same length of y_axes
-    slice_size define how much rows be visualid, in table below graph
-
-    :param request:
-    :return:
-    """
-    response_parallel_coordinates_chart = get_response_parallel_coordinates_chart(request)
-    y_axes = response_parallel_coordinates_chart["y_axes"]
-    slice_size = response_parallel_coordinates_chart["samples_size"]
-    data = PARALLEL_COORDINATES_DATA
-    return render(request, 'visualiser/parallel_coordinates_chart.html',
-                  {"y_axes": y_axes, "data": data, "slice_size": slice_size})
-
 
 @csrf_exempt
 def get_response_heat_map_on_map(request):
@@ -633,52 +599,3 @@ def heat_map_on_map(request):
     return heatmap_on_map.show_chart()
 
 
-def thermometer_chart(request):
-    recordData = {}
-    for i in range(1, 11):
-        temp = []
-        for j in THERMOMETER:
-            t = {"date": j["date"], "value": j["value"] * i}
-            temp.append(t)
-        recordData[i] = temp
-    response_thermometer_chart = get_response_data_XY(request)
-    min_max_temp = response_thermometer_chart["min_max_y_value"]
-    min_temp = min_max_temp[0]
-    max_temp = min_max_temp[1]
-    return render(request, 'visualiser/thermometer_chart.html', {"data": THERMOMETER, "recordData": recordData,
-                                                                 "min_temp": min_temp, "max_temp": max_temp})
-
-
-def parallel_coordinates_chart2(request):
-    """
-    :param request:
-    :return:
-    """
-    response_parallel_coordinates_chart2 = get_response_parallel_coordinates_chart(request)
-    y_axes = response_parallel_coordinates_chart2["y_axes"]
-    title = response_parallel_coordinates_chart2["title"]
-    about_title = response_parallel_coordinates_chart2["about_title"]
-    about_text = response_parallel_coordinates_chart2["about_text"]
-    groups_title = response_parallel_coordinates_chart2["groups_title"]
-    sample_size = response_parallel_coordinates_chart2["samples_size"]
-    # data = PARALLEL_COORDINATES_DATA_2
-    data = generate_data_for_parallel_coordinates_chart2()
-    samples_title = "Sample of %s entries" % sample_size
-    # Create the variable colored_groups
-    # First get the unique groups of give data
-    groups_list = list(set(map(lambda x: x[1], data)))
-    colored_groups = {}
-    for k, group in enumerate(groups_list):
-        colored_groups[group] = D3_PARALLEL_COORDINATES_COLORS[k]
-    # Greate a dict with keys the name of groups and value a list which represent the HSL color
-    return render(request, 'visualiser/parallel_coordinates_chart2.html', {
-        "data": data,
-        "y_axes": y_axes,
-        "title": title,
-        "about": about_title,
-        "about_text": about_text,
-        "groups": groups_title,
-        "samples": samples_title,
-        "samples_size": sample_size,
-        "colored_groups": colored_groups
-    })
