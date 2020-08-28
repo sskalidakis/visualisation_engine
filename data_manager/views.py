@@ -4,9 +4,10 @@ import logging
 import sys
 import json
 
+import pandas as pd
+
 from data_manager.models import Dataset, Variable
 from visualiser.visualiser_settings import DATA_TABLES_APP
-
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO,
                     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
@@ -107,3 +108,16 @@ def heatmap_ordering(order, variables, var_position):
         if order == field.name:
             ordering = str(variables[var_position].var_name) + "__" + str(field.name)
     return ordering
+
+
+def create_users_per_country():
+    ENGINE_STRING = 'postgresql+psycopg2://{}:{}@{}/{}'.format(
+        'admin',
+        'admin',
+        'qualichain.epu.ntua.gr',
+        'api_db'
+    )
+    users_df = pd.read_sql_table('users', ENGINE_STRING)
+    group = users_df[['country', 'id']].groupby('country').count().reset_index()
+    final_values = group.to_dict('index').values()
+    return final_values

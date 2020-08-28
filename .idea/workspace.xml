@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="19ef2fbb-f249-4e43-a75a-21659b7c98be" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_manager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_manager/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualiser/examples/url_examples" beforeDir="false" afterPath="$PROJECT_DIR$/visualiser/examples/url_examples" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualiser/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualiser/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +93,7 @@
       <updated>1598450435123</updated>
       <workItem from="1598450436637" duration="7175000" />
       <workItem from="1598516876855" duration="5735000" />
-      <workItem from="1598603935528" duration="2812000" />
+      <workItem from="1598603935528" duration="5353000" />
     </task>
     <task id="LOCAL-00001" summary="project initialisation">
       <created>1598452109272</created>
