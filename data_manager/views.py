@@ -119,5 +119,5 @@ def create_users_per_country():
     )
     users_df = pd.read_sql_table('users', ENGINE_STRING)
     group = users_df[['country', 'id']].groupby('country').count().reset_index()
-    final_values = group.to_dict('index').values()
+    final_values = list(group.to_dict('index').values())
     return final_values
